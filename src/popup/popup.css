@@ -1,3 +1,45 @@
+/* General styles */
 body {
-  background-color: #1c1c1c;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    overflow: scroll;
+    width: 330px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+}
+
+.header-first{
+    display: flex;
+}
+
+.header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.content{
+  height: 300px;
+  overflow: scroll;
+  margin: 10px 0 30px;
 }

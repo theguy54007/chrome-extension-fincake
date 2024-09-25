@@ -1,5 +1,5 @@
 {
-  "name": "React Extension",
+  "name": "fincake小助手",
   "description": "Chrome Extension in React!",
   "version": "1.0.0",
   "manifest_version": 3,
@@ -10,10 +10,24 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "React Extension",
+    "default_title": "fincake小助手",
     "default_icon": "icon.png"
   },
-  "permissions": ["storage"],
+  "permissions": [
+    "storage",
+    "tabs",
+    "contextMenus",
+    "cookies",
+    "activeTab",
+    "alarms",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://www.fincake.co/*",
+    "https://api.fincake.co/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
   "options_page": "options.html",
   "background": {
     "service_worker": "background.js"
@@ -23,5 +37,11 @@
       "matches": ["<all_urls>"],
       "js": ["contentScript.js"]
     }
-  ]
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://*.localhost/*"
+    ],
+    "accepts_tls_channel_id": true
+  }
 }
